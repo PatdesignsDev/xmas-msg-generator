@@ -63,7 +63,7 @@ form {
 }
 
 a {
-  color: rgb(255, 10, 10);
+  color: rgb(215, 214, 214);
 }
 
 .instructions {
@@ -132,6 +132,7 @@ a {
 }
 
 footer {
+
   font-size: 12px;
   text-align: center;
   margin-top: 30px;
