@@ -63,7 +63,7 @@ form {
 }
 
 a {
-  color: rgb(175, 175, 175);
+  color: rgb(255, 10, 10);
 }
 
 .instructions {
@@ -78,7 +78,7 @@ a {
 
 .submit-button {
   margin-left: 10px;
-  background: #db0000;
+  background: #d20000;
   color: white;
   border: none;
   border-radius: 50px;
