@@ -1,4 +1,5 @@
 function displayMsg(response) {
+    
   new Typewriter("#message", {
     strings: response.data.answer,
     autoStart: true,
@@ -7,7 +8,7 @@ function displayMsg(response) {
   });
 }
 
-function generatePoem(event) {
+function generateMsg(event) {
   event.preventDefault();
 
   // built api url
@@ -25,8 +26,8 @@ function generatePoem(event) {
 
   //make call to the api by axios
 
-  axios.get(apiUrl).then(displayChristmasMsg);
+  axios.get(apiUrl).then(displayMsg);
 }
 
 let messageFormElement = document.querySelector("#msg-generator-form");
-messageFormElement.addEventListener("submit", generateMessage);
+messageFormElement.addEventListener("submit", generateMsg);
