@@ -24,6 +24,26 @@ h1 {
   color: #ffffff;
 }
 
+.linear-wipe {
+  text-align: center;
+
+  background: linear-gradient(to right, #fff 20%, #ff0 40%, #ff0 60%, #fff 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 1s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
 .form-container {
   background-color: white;
   margin-bottom: 30px;
@@ -46,7 +66,7 @@ form {
 }
 
 a {
-  color:whitesmoke;
+  color: lightgoldenrodyellow;
 }
 
 .instructions {
@@ -71,33 +91,29 @@ a {
   transition: all 200ms ease-in-out;
 }
 
-
 .submit-button:hover {
-        opacity: 0.8;
-        cursor: pointer;
-        animation: bounceRotate 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-          forwards;
-      }
+  opacity: 0.8;
+  cursor: pointer;
+  animation: bounceRotate 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
 
-      @keyframes bounceRotate {
-        0% {
-          transform: translateY(0) rotate(0deg);
-        }
-        30% {
-          transform: translateY(-15px) rotate(-10deg);
-        }
-        50% {
-          transform: translateY(0) rotate(10deg);
-        }
-        70% {
-          transform: translateY(-8px) rotate(-5deg);
-        }
-        100% {
-          transform: translateY(0) rotate(0deg);
-        }
-      }
-
-
+@keyframes bounceRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-15px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(10deg);
+  }
+  70% {
+    transform: translateY(-8px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 
 .message {
   background-color: white;
