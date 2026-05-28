@@ -27,7 +27,7 @@ h1 {
 .form-container {
   background-color: white;
   margin-bottom: 30px;
-  border-radius: 40px;
+  border-radius: 10px;
   border-color: #db0000;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   padding: 15px 20px;
@@ -46,7 +46,7 @@ form {
 }
 
 a {
-  color: #267000;
+  color: #ff3052;
 }
 
 .instructions {
@@ -86,10 +86,11 @@ a {
 }
 
 .message strong {
-  color: #005d33;
+  color: #db0000;
 }
 
 footer {
+  color:whitesmoke;
   font-size: 12px;
   text-align: center;
   margin-top: 30px;
