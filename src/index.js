@@ -1,5 +1,7 @@
 function displayMsg(response) {
-    
+  let messageElement = document.querySelector("#message");
+  messageElement.innerHTML = "";
+
   new Typewriter("#message", {
     strings: response.data.answer,
     autoStart: true,
@@ -8,10 +10,8 @@ function displayMsg(response) {
   });
 }
 
-function generateMsg(event) {
+function generateMessage(event) {
   event.preventDefault();
-
-  // built api url
 
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "5c9fa8tb15a0808c494ddd28db3adc8o";
@@ -22,12 +22,10 @@ function generateMsg(event) {
 
   let messageElement = document.querySelector("#message");
   messageElement.classList.remove("hidden");
-  messageElement.innerHTML = `<div class="generating"> ⏳Generating a Portuguese Christmas message about ${instructionsInput.value}</div>`;
-
-  //make call to the api by axios
+  messageElement.innerHTML = `<div class="generating">⏳ Generating a Portuguese Christmas message about ${instructionsInput.value}</div>`;
 
   axios.get(apiUrl).then(displayMsg);
 }
 
 let messageFormElement = document.querySelector("#msg-generator-form");
-messageFormElement.addEventListener("submit", generateMsg);
+messageFormElement.addEventListener("submit", generateMessage);
