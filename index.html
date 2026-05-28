@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <title>AI Christmas Msg Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>AI 🎄Christmas Msg 📩 Generator</h1>
+      </header>
+      <main>
+        <div class="form-container">
+          <form id="msg-generator-form">
+            <input
+              type="text"
+              placeholder=" Enter the topic of the Portuguese Christmas message you'd like to generate"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Amor, Natal, Prendas, Paz</div>
+        </div>
+
+        <div class="message hidden" id="message"></div>
+      </main>
+      <footer>
+        This was coded by
+        <a href="https://github.com/PatdesignsDev" target="_blank">
+          Patrícia Moutinho
+        </a>
+        and is opened-sourced on
+        <a
+          href="https://github.com/PatdesignsDev/poem-generator"
+          target="blanck"
+        >
+          Github
+        </a>
+        and
+        <a href="https://poem-generator-3ad4.onrender.com/" target="_blank">
+          hosted on Render
+        </a>
+      </footer>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>
+
+

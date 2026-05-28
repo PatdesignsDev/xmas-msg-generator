@@ -1,0 +1,32 @@
+function displayMsg(response) {
+  new Typewriter("#message", {
+    strings: response.data.answer,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
+
+function generatePoem(event) {
+  event.preventDefault();
+
+  // built api url
+
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "5c9fa8tb15a0808c494ddd28db3adc8o";
+  let prompt = `Generate a Portuguese christmas message about ${instructionsInput.value}`;
+  let context =
+    "User instructions: You are a christmas lovely warm messages expert. Generate a 5 line message in HTML using <p> tags only. Do not use markdown, do not use code blocks, do not include backticks. End the message with a <p> signed by `Santa claus AI 🌟` inside a <strong> element. Only return HTML, nothing else.";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let messageElement = document.querySelector("#message");
+  messageElement.classList.remove("hidden");
+  messageElement.innerHTML = `<div class="generating"> ⏳Generating a Portuguese Christmas message about ${instructionsInput.value}</div>`;
+
+  //make call to the api by axios
+
+  axios.get(apiUrl).then(displayChristmasMsg);
+}
+
+let messageFormElement = document.querySelector("#msg-generator-form");
+messageFormElement.addEventListener("submit", generateMessage);

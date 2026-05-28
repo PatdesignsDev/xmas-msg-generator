@@ -1,0 +1,107 @@
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 120px auto;
+  max-width: 600px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #db0000;
+}
+
+.form-container {
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  padding: 15px 20px;
+}
+
+form {
+  display: flex;
+}
+
+.hint {
+  line-height: 1.5;
+  margin-left: 20px;
+  margin-top: 10px;
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+a {
+  color: #ff0000;
+}
+
+.instructions {
+  padding: 16px;
+  border: 1px solid #313131;
+  width: 80%;
+  font-size: 13px;
+  border-radius: 50px;
+  line-height: 20px;
+  color: rgb(37, 37, 37);
+}
+
+.submit-button {
+  margin-left: 10px;
+  background: #005d33;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 150px;
+  font-size: 16px;
+  padding: 14px 24px;
+}
+
+.message {
+  background-color: white;
+  border-left: 3px solid #db0000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  line-height: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.message strong {
+  color: #ff00c8;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
